@@ -46,7 +46,7 @@ class _ContactFragmentState extends State<ContactFragment> {
                   leading: Icon(icons[index]),
                   onTap: (){
                /*     Navigator.push(context, MaterialPageRoute(builder:(context),TakePictureScreen()));*/
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CameraApp()));
+                  //  Navigator.push(context, MaterialPageRoute(builder: (context)=>CameraApp()));
                   },
                 ),
 

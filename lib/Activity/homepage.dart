@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:myapp_app/Fragment/aboutfragment.dart';
 import 'package:myapp_app/Fragment/cliperfragment.dart';
 import 'package:myapp_app/Fragment/contactfragment.dart';
+import 'package:myapp_app/Fragment/googlemapfragment.dart';
 import 'package:myapp_app/Fragment/homeframent.dart';
 import 'package:myapp_app/Fragment/loginfragment.dart';
+import 'package:myapp_app/Fragment/pageviewfragment.dart';
 import 'package:myapp_app/Fragment/profilefragment.dart';
 import 'package:myapp_app/Fragment/registerfragment.dart';
+import 'package:myapp_app/Fragment/stackfragment.dart';
 class DrawerItem{
   String title;
   IconData icon;
   IconData icont;
   DrawerItem(this.title,this.icon,this.icont);
 }
-
-class HomePage extends StatefulWidget {
+ class HomePage extends StatefulWidget {
   final drawerItems = [
     new DrawerItem("Home", Icons.rss_feed,Icons.arrow_forward_ios),
     new DrawerItem("Login", Icons.local_pizza,Icons.arrow_forward_ios),
@@ -21,7 +23,11 @@ class HomePage extends StatefulWidget {
     new DrawerItem("Register", Icons.rss_feed,Icons.arrow_forward_ios),
     new DrawerItem("Contact", Icons.local_pizza,Icons.arrow_forward_ios),
     new DrawerItem("Profile", Icons.info,Icons.arrow_forward_ios),
-    new DrawerItem("Clip", Icons.account_box,Icons.arrow_forward_ios)
+    new DrawerItem("Clip", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Stack", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Cliper", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Google Map", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Camera", Icons.account_box,Icons.arrow_forward_ios)
   ];
   @override
   _HomePageState createState() => _HomePageState();
@@ -35,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return new HomeFragment();
       case 1:
-        return new LoginFragment();
+        return new LoginFragment();  //LoginFragment MapSample
       case 2:
         return new AboutFragment();
       case 3:
@@ -46,10 +52,19 @@ class _HomePageState extends State<HomePage> {
         return new ProfileFragment();
       case 6:
         return new WavyHeaderImage();
+      case 7:
+        return new StackFragment();
+      case 8:
+        return new PageViewFragment();
+      case 9:
+        return new MapSample();
+      case 10:
+        return new CameraApp();
         default:
         return new Text("Error");
     }
   }
+  //CameraApp
   _onSelectItem(int index) {
     setState(() => _selectedDrawerIndex = index);
     Navigator.of(context).pop(); // close the drawer
@@ -74,6 +89,26 @@ class _HomePageState extends State<HomePage> {
       title: new Text(widget.drawerItems[_selectedDrawerIndex].title),
       ),
       drawer: new Drawer(
+      child: ListView(
+        children: <Widget>[
+          DrawerHeader(
+            child: Text('UserName',style: TextStyle(
+              fontSize: 20,color: Colors.white
+            ),),
+            decoration: BoxDecoration(
+              color: Colors.red,
+             ),
+          ),
+          new Column(children: drawerOptions)
+          ],
+       ),
+       ),
+      body: _getDrawerItemWidget(_selectedDrawerIndex),
+
+    );
+  }
+}
+/*drawer: new Drawer(
         child: new Column(
           children: <Widget>[
             new UserAccountsDrawerHeader(
@@ -82,8 +117,4 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: _getDrawerItemWidget(_selectedDrawerIndex),
-
-    );
-  }
-}
+      */

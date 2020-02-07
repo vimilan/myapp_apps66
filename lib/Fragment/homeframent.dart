@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_app/Activity/seconpage.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 ProgressDialog pr;
 class HomeFragment extends StatefulWidget {
@@ -21,7 +22,7 @@ class _HomeFragmentState extends State<HomeFragment> {
   Widget build(BuildContext context) {
     Widget Loginde=Container(
         child:  TextFormField(
-          controller: _uname,
+        controller: _uname,
         decoration: InputDecoration(
           hintText: 'Enter Username',
           labelText: 'Enter Username',
@@ -39,7 +40,7 @@ class _HomeFragmentState extends State<HomeFragment> {
       pr.show();
      Future.delayed(Duration(seconds: 3)).then((value){
   pr.hide().whenComplete((){
-    //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SecondScreen()));
+  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomePage()));
    }
    );
    });

@@ -27,10 +27,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   progress_dialog: ^1.2.0
-  camera: 0.5.7+3
+  camera: ^0.5.7+3
+  google_maps_flutter: ^0.5.22+1
 
-  #camera 0.5.7+3
-  path_provider: 1.6.0
+ path_provider: 1.6.0
   path:
 dev_dependencies:
   flutter_test:
@@ -53,6 +53,8 @@ flutter:
     - images/logo.jpg
     - images/bg.jpg
     - images/save.jpeg
+    - images/lg.png
+    - images/ggg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
