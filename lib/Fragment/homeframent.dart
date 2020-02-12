@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp_app/Activity/seconpage.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 ProgressDialog pr;
+
 class HomeFragment extends StatefulWidget {
   @override
   _HomeFragmentState createState() => _HomeFragmentState();
@@ -20,6 +21,7 @@ class _HomeFragmentState extends State<HomeFragment> {
   }
   @override
   Widget build(BuildContext context) {
+
     Widget Loginde=Container(
         child:  TextFormField(
         controller: _uname,
@@ -32,31 +34,25 @@ class _HomeFragmentState extends State<HomeFragment> {
      );
     Widget butn=Container(
       child:RaisedButton(
+
         onPressed: (){
-          setState(() {
-            _uname.text.isEmpty ? _validate = true : _validate = false;
-            _upass.text.isEmpty ? _validate = true : _validate = false;
+            setState(() {
+          _uname.text.isEmpty ? _validate = true : _validate = false;
+          _upass.text.isEmpty ? _validate = true : _validate = false;
           });
-      pr.show();
-     Future.delayed(Duration(seconds: 3)).then((value){
-  pr.hide().whenComplete((){
-  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+         pr.show();
+
+      Future.delayed(Duration(seconds: 3)).then((value){
+       pr.hide().whenComplete((){
+    //    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomePage()));
    }
    );
    });
    },
-        child: Text('Login'),
-     /* pr.show();
-      Future.delayed(Duration(seconds: 3)).then((value) {
-        pr.hide().whenComplete(() {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => SecondScreen()));
-        },
-        child: Text('Login'),
-        color: Colors.grey,
-      }*/
+    child: Text('Login'),
       )
     );
+
     Widget Logindes=Container(
         child:  TextFormField(
           controller: _upass,
@@ -68,6 +64,7 @@ class _HomeFragmentState extends State<HomeFragment> {
         ),
 
     );
+
     Widget widgets=
         Container(
           child: Stack(
@@ -78,6 +75,7 @@ class _HomeFragmentState extends State<HomeFragment> {
         );
 
     Widget buildRow= Row(
+
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Icon(Icons.accessibility,size: 120,),
@@ -94,6 +92,13 @@ class _HomeFragmentState extends State<HomeFragment> {
         )
       ),
     );
+
+    Widget hasd=CircleAvatar(
+      radius: 100.0,
+    backgroundImage: NetworkImage('https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg'),
+    //  backgroundImage:AssetImage('images/logo.jpg'),
+      backgroundColor: Colors.transparent,
+    );
     Widget data=Container(
         width: 120.0,
         height: 120.0,
@@ -103,8 +108,8 @@ class _HomeFragmentState extends State<HomeFragment> {
                 fit: BoxFit.fill,
                 image: AssetImage('images/logo.jpg')
             )
-        ));
-
+        )
+    );
     pr = new ProgressDialog(context);
     pr.style(
         message: 'Please Waiting...',
@@ -121,15 +126,15 @@ class _HomeFragmentState extends State<HomeFragment> {
     return Scaffold(
       body: Container(
      decoration: BoxDecoration(
-     image: DecorationImage(
-        image: AssetImage("images/bg.jpg"),
+       image: DecorationImage(
+       image: AssetImage("images/bg.jpg"),
         fit: BoxFit.cover,
     ),
     ),
     child: Center(
         child: ListView(
         shrinkWrap: true,
-        children: <Widget>[data,Loginde,Logindes,butn],
+        children: <Widget>[hasd,Loginde,Logindes,butn],
       ),
     ) /* add child content here */,
     ),

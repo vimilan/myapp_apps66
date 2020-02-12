@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1057623606859",
+    "firebase_url": "https://my-application-8de81.firebaseio.com",
+    "project_id": "my-application-8de81",
+    "storage_bucket": "my-application-8de81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057623606859:android:f37e35c18bcb188cbd6fce",
+        "android_client_info": {
+          "package_name": "com.aarogya.myapp_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057623606859-21pn1r449761gg1onlu3oa3btltdkd8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkomWkLCEUzDuhqlddoXjUg2EXtf3zaqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057623606859-21pn1r449761gg1onlu3oa3btltdkd8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

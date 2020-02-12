@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_app/Activity/mainnew.dart';
 import 'package:myapp_app/Activity/tackpic.dart';
 import 'package:myapp_app/Fragment/aboutfragment.dart';
 import 'package:myapp_app/Fragment/cliperfragment.dart';
@@ -20,18 +21,19 @@ class DrawerItem{
 }
  class HomePage extends StatefulWidget {
   final drawerItems = [
-    new DrawerItem("Home", Icons.rss_feed,Icons.arrow_forward_ios),
-    new DrawerItem("Login", Icons.local_pizza,Icons.arrow_forward_ios),
-    new DrawerItem("About", Icons.info,Icons.arrow_forward_ios),
-    new DrawerItem("Register", Icons.rss_feed,Icons.arrow_forward_ios),
+    new DrawerItem("Home",    Icons.rss_feed,Icons.arrow_forward_ios),
+    new DrawerItem("Login",   Icons.local_pizza,Icons.arrow_forward_ios),
+    new DrawerItem("About",   Icons.info,Icons.arrow_forward_ios),
+    new DrawerItem("Register",Icons.rss_feed,Icons.arrow_forward_ios),
     new DrawerItem("Contact", Icons.local_pizza,Icons.arrow_forward_ios),
     new DrawerItem("Profile", Icons.info,Icons.arrow_forward_ios),
-    new DrawerItem("Clip", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Stack", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Cliper", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Google Map", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Camera", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Firebase", Icons.account_box,Icons.arrow_forward_ios)
+    new DrawerItem("Clip",    Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Stack",   Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Cliper",  Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Google Map",Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Camera",  Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("RealTime Firebase", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Firebase App in notify", Icons.account_box,Icons.arrow_forward_ios)
   ];
   @override
   _HomePageState createState() => _HomePageState();
@@ -66,6 +68,8 @@ class _HomePageState extends State<HomePage> {
         return new MyCamera();
       case 11:
         return new FirebaseFragment();
+       case 12:
+        return new MyApps();
         default:
         return new Text("Error");
     }
