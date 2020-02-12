@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
@@ -24,11 +23,8 @@ Future<void> main() async {
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
   final CameraDescription camera;
-
   const TakePictureScreen({
-    Key key,
-    @required this.camera,
-  }) : super(key: key);
+    Key key, @required this.camera,}) : super(key: key);
 
   @override
   TakePictureScreenState createState() => TakePictureScreenState();

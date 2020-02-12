@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_app/Activity/tackpic.dart';
 import 'package:myapp_app/Fragment/aboutfragment.dart';
 import 'package:myapp_app/Fragment/cliperfragment.dart';
 import 'package:myapp_app/Fragment/contactfragment.dart';
+import 'package:myapp_app/Fragment/firebasefragment.dart';
 import 'package:myapp_app/Fragment/googlemapfragment.dart';
 import 'package:myapp_app/Fragment/homeframent.dart';
 import 'package:myapp_app/Fragment/loginfragment.dart';
+import 'package:myapp_app/Fragment/newcamera.dart';
 import 'package:myapp_app/Fragment/pageviewfragment.dart';
 import 'package:myapp_app/Fragment/profilefragment.dart';
 import 'package:myapp_app/Fragment/registerfragment.dart';
@@ -27,7 +30,8 @@ class DrawerItem{
     new DrawerItem("Stack", Icons.account_box,Icons.arrow_forward_ios),
     new DrawerItem("Cliper", Icons.account_box,Icons.arrow_forward_ios),
     new DrawerItem("Google Map", Icons.account_box,Icons.arrow_forward_ios),
-    new DrawerItem("Camera", Icons.account_box,Icons.arrow_forward_ios)
+    new DrawerItem("Camera", Icons.account_box,Icons.arrow_forward_ios),
+    new DrawerItem("Firebase", Icons.account_box,Icons.arrow_forward_ios)
   ];
   @override
   _HomePageState createState() => _HomePageState();
@@ -59,7 +63,9 @@ class _HomePageState extends State<HomePage> {
       case 9:
         return new MapSample();
       case 10:
-        return new CameraApp();
+        return new MyCamera();
+      case 11:
+        return new FirebaseFragment();
         default:
         return new Text("Error");
     }

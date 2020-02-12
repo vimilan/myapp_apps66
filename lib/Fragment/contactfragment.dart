@@ -49,8 +49,7 @@ class _ContactFragmentState extends State<ContactFragment> {
                   //  Navigator.push(context, MaterialPageRoute(builder: (context)=>CameraApp()));
                   },
                 ),
-
-              );
+               );
             }),
       ),
     );

@@ -29,9 +29,14 @@ dependencies:
   progress_dialog: ^1.2.0
   camera: ^0.5.7+3
   google_maps_flutter: ^0.5.22+1
-
- path_provider: 1.6.0
+  path_provider: 1.6.0
   path:
+  http: 0.12.0+4
+  firebase_core: ^0.4.0+6
+  firebase_database: ^3.1.1
+
+  intl: ^0.15.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -56,7 +61,7 @@ flutter:
     - images/lg.png
     - images/ggg.png
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+  # An image asset can refer to one or moSliverAppBarre resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
   # For details regarding adding assets from package dependencies, see
