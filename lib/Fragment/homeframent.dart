@@ -3,7 +3,7 @@ import 'package:myapp_app/Activity/seconpage.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 ProgressDialog pr;
 
-class HomeFragment extends StatefulWidget {
+class  HomeFragment extends StatefulWidget {
   @override
   _HomeFragmentState createState() => _HomeFragmentState();
 }
